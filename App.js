@@ -1,11 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, Image,SafeAreaView, ScrollView } from 'react-native';
 import { useWindowDimensions } from 'react-native';
+import {PrimaryButton} from './components/primaryButton'
 
 export default function App() {
-  const window = useWindowDimensions();
+ function clickEvent(){
+  console.log("typing")
+ }
   return (
 
+    <SafeAreaView style={styles.container}>
+    <ScrollView style={styles.scrollView}>
     <View>
       <View style={styles.container}>
         <View style={styles.babyIconInner}>
@@ -14,9 +19,15 @@ export default function App() {
         <Text style={styles.textTitle}>wellcome to Growly</Text>
         <Text style={styles.textField}>Watch your baby grow, log your symptoms and learn what to expect week by week with Growly Pregnancy!</Text>
       </View>
-      <Image style={styles.vector} source={require('./assets/Vector.png')} />
+      <View>
+      <Image style={styles.vector} source={require('./assets/Vector.png')} resizeMode="cover" />
+      <PrimaryButton clicked={clickEvent} title="get Started"/>
 
-    </View>
+      </View>
+
+    </View> 
+    </ScrollView>
+    </SafeAreaView>
 
   );
 }
@@ -59,7 +70,11 @@ const styles = StyleSheet.create({
   },
   vector: {
     width:'100%',
-    height:339,
+    height:500,   
   },
+  footerVectorInner:{
+    width:'100%',
+    height:399
+  }
 
 });
