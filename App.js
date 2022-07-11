@@ -1,32 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Image,SafeAreaView, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Button, Image,ImageBackground, SafeAreaView, ScrollView } from 'react-native';
 import { useWindowDimensions } from 'react-native';
-import {PrimaryButton} from './components/primaryButton'
+import PrimaryButton from './components/primaryButton'
 
 export default function App() {
- function clickEvent(){
-  console.log("typing")
- }
+  function clickEvent() {
+    console.log("typing")
+  }
   return (
 
     <SafeAreaView style={styles.container}>
-    <ScrollView style={styles.scrollView}>
-    <View>
-      <View style={styles.container}>
-        <View style={styles.babyIconInner}>
-          <Image style={styles.babyIcon} source={require('./assets/baby.png')} />
+      <ScrollView style={styles.scrollView}>
+        <View>
+          <View style={styles.container}>
+            <View style={styles.babyIconInner}>
+              <Image style={styles.babyIcon} source={require('./assets/baby.png')} />
+            </View>
+            <Text style={styles.textTitle}>wellcome to Growly</Text>
+            <Text style={styles.textField}>Watch your baby grow, log your symptoms and learn what to expect week by week with Growly Pregnancy!</Text>
+          </View>
+          <View style={styles.vector}>
+            <Image source={require('./assets/Vector.png')} resizeMode="cover" />
+            <View>
+              <Text>dasdasdasdas</Text>
+            </View>
+            <PrimaryButton  onPress={clickEvent} text='get started' />
+          </View>
+
         </View>
-        <Text style={styles.textTitle}>wellcome to Growly</Text>
-        <Text style={styles.textField}>Watch your baby grow, log your symptoms and learn what to expect week by week with Growly Pregnancy!</Text>
-      </View>
-      <View>
-      <Image style={styles.vector} source={require('./assets/Vector.png')} resizeMode="cover" />
-      <PrimaryButton clicked={clickEvent} title="get Started"/>
-
-      </View>
-
-    </View> 
-    </ScrollView>
+        <ImageBackground source={require('./assets/Vector.png')} resizeMode="cover" style={styles.image}>
+          <PrimaryButton style={styles.text} onPress={clickEvent} text='get started' />
+        </ImageBackground>
+      </ScrollView>
     </SafeAreaView>
 
   );
@@ -35,12 +40,26 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     marginTop: 100,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: 'column-end',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
     marginBottom: 18,
 
 
+  },
+  image: {
+    flex: 1,
+    justifyContent: "center",
+    width: "100%",
+    height:400,
+  },
+  text: {
+    color: "white",
+    fontSize: 42,
+    lineHeight: 84,
+    fontWeight: "bold",
+    textAlign: "center",
+    backgroundColor: "#000000c0"
   },
   textTitle: {
     fontSize: 18,
@@ -69,12 +88,17 @@ const styles = StyleSheet.create({
     color: '#25396F',
   },
   vector: {
-    width:'100%',
-    height:500,   
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  footerVectorInner:{
-    width:'100%',
-    height:399
+  footerVectorInner: {
+    width: '100%',
+    height: 399
+  },
+  primaryButton: {
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 
 });
