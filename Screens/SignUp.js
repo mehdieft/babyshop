@@ -1,6 +1,13 @@
 import { StyleSheet, Text, View, Button, TextInput, Image, ImageBackground, SafeAreaView, ScrollView } from 'react-native';
 import React from 'react';
 import SignUpBottom from '../components/SignUpBottom';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+
+
+
+
+
 export default function SignUp() {
     const [text, onChangeText] = React.useState("Useless Text");
     const [number, onChangeNumber] = React.useState(null);
@@ -28,7 +35,7 @@ export default function SignUp() {
 
 
 
-                <View style={{ borderBottomWidth: 1, width: '98%' ,marginBottom:32}}>
+                <View style={{ borderBottomWidth: 1, width: '98%', marginBottom: 32 }}>
 
                     <TextInput
                         style={{ fontSize: 16, marginHorizontal: 16, borderEndWidth: 2, color: '#3EB09B' }}
@@ -39,7 +46,31 @@ export default function SignUp() {
                     />
                 </View>
                 {/* <SignUpBottom text="signUp" color="#00866A" onPress={this.press}/> */}
-                <SignUpBottom style={{marginRight:160}} title="signUp" color="#00866A" onclick={press} />
+                <SignUpBottom style={{ marginRight: 160 }} title="signUp" color="#00866A" onclick={press} />
+                <View style={{ flexDirection: 'row',height:300,backgroundColor:'red',width:300 }}>
+                    <Icon.Button
+                        name="facebook"
+                        backgroundColor="#3b5998"
+                        onPress={this.loginWithFacebook}
+                    >
+                        Login with Facebook
+                    </Icon.Button>
+                    <Icon.Button
+                        name="facebook"
+                        backgroundColor="#3b5998"
+                        onPress={this.loginWithFacebook}
+                    >
+                        Login with Facebook
+                    </Icon.Button>
+                    <Icon.Button
+                        name="facebook"
+                        backgroundColor="#3b5998"
+                        onPress={this.loginWithFacebook}
+                    >
+                        Login with Facebook
+                    </Icon.Button>
+                </View>
+                <View><Text>dasdakjshdjksahdkjashdkjash</Text></View>
             </View>
         </View>
 
