@@ -10,7 +10,7 @@ export default function HomePage({ navigation }) {
         <SafeAreaView style={styles.container}>
             <ScrollView style={styles.scrollView}>
                 <View>
-                    <View style={styles.container}>
+                    <View style={styles.headerConatiner} >
                         <View style={styles.babyIconInner}>
                             <Image style={styles.babyIcon} source={require('../assets/baby.png')} />
                         </View>
@@ -19,8 +19,13 @@ export default function HomePage({ navigation }) {
                     </View>
                 </View>
                 <ImageBackground source={require('../assets/Vector.png')} resizeMode="cover" style={styles.image}>
-                    <PrimaryButton style={styles.text} onPress={() => navigation.navigate('signUp')} text='get started' />
+                    <View style={styles.text}>
+
+                    <PrimaryButton  onPress={() => navigation.navigate('signUp')} text='get started' />
+                    </View>
+                    <View></View>
                 </ImageBackground>
+                <View style={styles.freeSpace}></View>
             </ScrollView>
         </SafeAreaView>
 
@@ -36,11 +41,22 @@ const styles = StyleSheet.create({
 
 
     },
+    freeSpace:{
+        height:200
+    },
+    headerConatiner:{
+        marginTop: 100,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+
+    },
     image: {
         flex: 1,
-        justifyContent: "center",
+        justifyContent: "flex-end",
+        alignItems: "flex-end",
         width: "100%",
-        height: 400,
+        height: 300,
     },
     text: {
         color: "white",
@@ -48,7 +64,10 @@ const styles = StyleSheet.create({
         lineHeight: 84,
         fontWeight: "bold",
         textAlign: "center",
-        backgroundColor: "#000000c0"
+        // backgroundColor: "#000000c0",
+        marginBottom:20,
+        
+        alignSelf:'flex-end',
     },
     textTitle: {
         fontSize: 18,
