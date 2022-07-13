@@ -11,7 +11,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 
 export default function SignUp({ navigation }) {
-    const [text, onChangeText] = React.useState("Useless Text");
+    const [text, onChangeText] = React.useState(null);
     const [number, onChangeNumber] = React.useState(null);
     function press() {
         console.log('press signUp');
