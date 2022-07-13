@@ -7,7 +7,7 @@ export default function HomePage({ navigation }) {
         console.log("typing")
     }
     return (
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
             <ScrollView style={styles.scrollView}>
                 <View>
                     <View style={styles.headerConatiner} >
@@ -27,7 +27,7 @@ export default function HomePage({ navigation }) {
                 </ImageBackground>
                 <View style={styles.freeSpace}></View>
             </ScrollView>
-        </SafeAreaView>
+        </View>
 
     )
 }
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: 18,
-
+        marginRight:20
 
     },
     freeSpace:{
