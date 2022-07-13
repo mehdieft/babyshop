@@ -83,6 +83,13 @@ export default function Dashboard() {
                     <Chips title="Dizziness" onpress={()=>console.log('hello')} style={{marginRight:8}} />
                 </View>
                 <Text style={{color:'#00866A',padding:16}}>Medications</Text>
+               
+                <View style={{flexDirection: 'row',marginHorizontal:16}}>
+                <Chips title="Dizziness" onpress={()=>console.log('hello')}   />
+                </View>
+                
+
+
             </View>
 
 
