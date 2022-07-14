@@ -106,7 +106,7 @@ export default function Dashboard() {
                 <Text style={{ marginTop: 32 }}>Tools</Text>
                 <View style={{ marginVertical: 8 }}>
                     <ImageComponent bgColor="#EE6093" header="Kick Counter" content="Kick counter helps you to counts the baby movements">
-                        <Image style={{ width: 38, height: 30, padding: 29 }} src={require('../assets/icons/doggy.png')} />
+                        <Image style={{ width: 38, height: 30, marginVertical: 29,marginHorizontal:29 }} source={require('../assets/icons/doggy.png')} resizeMode="cover" />
                     </ImageComponent>
                     <View></View>
                 </View>
