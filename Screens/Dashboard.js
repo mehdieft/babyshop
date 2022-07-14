@@ -3,6 +3,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { EvilIcons } from '@expo/vector-icons';
 import Chips from '../components/Chips';
 import CardComponent from '../components/CardComponent';
+import ImageComponent from '../components/ImageComponent'
 
 
 
@@ -101,8 +102,13 @@ export default function Dashboard() {
                     <CardComponent h1="Cycle Length" t1="24 Days" h2="Sleep" t2="8.20 Hrs" />
                     <CardComponent h1="temprature" t1="94.31 F" h2="Weight" t2="71.54 Kg" />
 
-
-
+                </View>
+                <Text style={{ marginTop: 32 }}>Tools</Text>
+                <View style={{ marginVertical: 8 }}>
+                    <ImageComponent bgColor="#EE6093" header="Kick Counter" content="Kick counter helps you to counts the baby movements">
+                        <Image style={{ width: 38, height: 30, padding: 29 }} src={require('../assets/icons/doggy.png')} />
+                    </ImageComponent>
+                    <View></View>
                 </View>
 
 
