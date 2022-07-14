@@ -2,6 +2,7 @@ import { View, Text, Image, ImageBackground, StyleSheet, ScrollView } from 'reac
 import { LinearGradient } from 'expo-linear-gradient';
 import { EvilIcons } from '@expo/vector-icons';
 import Chips from '../components/Chips';
+import CardComponent from '../components/CardComponent';
 
 
 
@@ -97,6 +98,8 @@ export default function Dashboard() {
                         <Chips title="Dizziness" onpress={() => console.log('hello')} />
 
                     </View>
+                    <CardComponent h1="Cycle Length" t1="24 Days" h2="Sleep" t2="8.20 Hrs" />
+                    <CardComponent h1="temprature" t1="94.31 F" h2="Weight" t2="71.54 Kg" />
 
 
 
