@@ -1,4 +1,4 @@
-import { View, Text, Image, ImageBackground, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, Image, ImageBackground, StyleSheet, ScrollView,Button } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient';
 import { EvilIcons } from '@expo/vector-icons';
 import Chips from '../components/Chips';
@@ -50,7 +50,7 @@ export default function Dashboard() {
                 </View>
 
                 {/* card is here */}
-                <View style={{ marginHorizontal: 8, backgroundColor: ' #FFFFFF' ,width:'100%'}} elevation={5}>
+                <View style={{ marginHorizontal: 8, backgroundColor: ' #FFFFFF', width: '100%' }} elevation={5}>
                     <View style={{ width: '100%', height: 32, backgroundColor: '#3EB09B', }}>
                         <ImageBackground source={require('../assets/icons/Vector.png')} resizeMode="cover" >
 
@@ -106,9 +106,27 @@ export default function Dashboard() {
                 <Text style={{ marginTop: 32 }}>Tools</Text>
                 <View style={{ marginVertical: 8 }}>
                     <ImageComponent bgColor="#EE6093" header="Kick Counter" content="Kick counter helps you to counts the baby movements">
-                        <Image style={{ width: 38, height: 30, marginVertical: 29,marginHorizontal:29 }} source={require('../assets/icons/doggy.png')} resizeMode="cover" />
+                        <Image style={{ width: 38, height: 30, marginVertical: 29, marginHorizontal: 29 }} source={require('../assets/icons/doggy.png')} resizeMode="cover" />
                     </ImageComponent>
-                    <View></View>
+                    <ImageComponent bgColor="#1AB0B0" header="Contraction Timer" content="Contraction Timer helps you to counts the baby during contraction">
+                        <Image style={{ width: 20, height: 30, marginVertical: 29, marginHorizontal: 39 }} source={require('../assets/icons/voltage.png')} resizeMode="cover" />
+                    </ImageComponent>
+
+                </View>
+                <Text style={{ marginTop: 32 }}>Articles & Videos</Text>
+                <View style={{width:334,height:160,marginTop:5}}>
+                    <Image source={require('../assets/pillow.png')} resizeMode="cover" style={{borderRadius: 5}} />
+                </View>
+                <View>
+                    <Text style={{padding:16,weight:'500',fontSize:16,lineHeight:24,color:'#282828'}}>
+                    Take a prenatal vitamin
+                    </Text>
+                    <Text style={{marginHorizontal:16,weight:'400',fontSize:14,lineHeight:21,color:'#646464'}}>
+                    Folic acid helps your baby's brain and spinal cord develop correctly. 
+                    This nutrient reduces the risk of 
+                    serious birth defects called spina bifida and anencephaly.
+                    </Text>
+                    <Text style={{marginHorizontal:16,marginVertical:8,color:'#00866'}}>Learn More</Text>
                 </View>
 
 
