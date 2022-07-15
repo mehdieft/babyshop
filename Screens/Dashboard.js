@@ -4,7 +4,7 @@ import { EvilIcons } from '@expo/vector-icons';
 import Chips from '../components/Chips';
 import CardComponent from '../components/CardComponent';
 import ImageComponent from '../components/ImageComponent'
-
+import { Ionicons } from '@expo/vector-icons';
 
 
 
@@ -115,7 +115,7 @@ export default function Dashboard() {
                 </View>
                 <Text style={{ marginTop: 32 }}>Articles & Videos</Text>
                 <View style={{ width: '100%', marginTop: 5, alignItems: 'center' }}>
-                    <Image source={require('../assets/pillow.png')} resizeMode="cover" style={{ borderRadius: 5,width:'100%' }} />
+                    <Image source={require('../assets/pillow.png')} resizeMode="cover" style={{ borderRadius: 5, width: '100%' }} />
                 </View>
                 <View elevation={5} style={{ backgroundColor: '#FFFFFF' }} >
                     <Text style={{ padding: 16, weight: '500', fontSize: 16, lineHeight: 24, color: '#282828' }}>
@@ -128,16 +128,30 @@ export default function Dashboard() {
                     </Text>
                     <Text style={{ marginHorizontal: 16, marginVertical: 8, color: '#00866A' }}>Learn More</Text>
                 </View>
-                <View style={{ width: '100%', height: 152, marginTop: 16,alignItems:'center'}}>
-                    <Image source={require('../assets/runner.png')} resizeMode="cover" style={{ borderRadius: 5 ,width:'100%'}} />
+                <View style={{ width: '100%', height: 152, marginTop: 16, alignItems: 'center' }}>
+                    <Image source={require('../assets/runner.png')} resizeMode="cover" style={{ borderRadius: 5, width: '100%' }} />
                 </View>
-                <View elevation={5} style={{ backgroundColor: '#FFFFFF' }}>
+                <View elevation={5} style={{ backgroundColor: '#FFFFFF',marginBottom:16 }}>
                     <Text style={{ padding: 16, weight: '500', fontSize: 16, lineHeight: 24, color: '#282828' }}>
                         Exercise regularly</Text>
                     <Text style={{ marginHorizontal: 16, weight: '400', fontSize: 14, lineHeight: 21, color: '#646464' }}>
                         Maintaining a regular exercise routine throughout
                         your pregnancy can help you stay healthy and feel your best.</Text>
                     <Text style={{ marginHorizontal: 16, marginVertical: 8, color: '#00866A' }}>Learn More</Text>
+
+                </View>
+                <View style={{ backgroundColor: '#FFFFFF', }}>
+                    <ImageBackground source={require('../assets/girl.png')} resizeMode="cover" style={{ justifyContent: 'center', alignItems: 'center',height:150 }}>
+                        <Ionicons name="md-play-circle-outline" size={48} color="white" />
+                    </ImageBackground>
+                </View>
+                <View elevation={5} style={{ backgroundColor: '#FFFFFF',marginBottom:32 }}>
+                    <Text style={{ padding: 16, weight: '500', fontSize: 16, lineHeight: 24, color: '#282828' }}>
+                    Coronavirus infection and pregnancy</Text>
+                    <Text style={{ marginHorizontal: 16, weight: '400', fontSize: 14, lineHeight: 21, color: '#646464' }}>
+                    Maintaining a regular exercise routine throughout your pregnancy can help you stay
+                     healthy and feel your best.</Text>
+                    <Text style={{ marginHorizontal: 16, marginVertical: 8, color: '#00866A' }}>Watch Now</Text>
 
                 </View>
 

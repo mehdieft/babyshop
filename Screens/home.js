@@ -21,7 +21,7 @@ export default function HomePage({ navigation }) {
                 <ImageBackground source={require('../assets/Vector.png')} resizeMode="cover" style={styles.image}>
                     <View style={styles.text}>
 
-                    <PrimaryButton  onPress={() => navigation.navigate('signUp')} text='get started' />
+                    <PrimaryButton  onPress={() => navigation.navigate('signUp')} text='get started' bgColor="#89D2C4" />
                     </View>
                     <View></View>
                 </ImageBackground>
