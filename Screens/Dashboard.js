@@ -50,7 +50,7 @@ export default function Dashboard() {
                 </View>
 
                 {/* card is here */}
-                <View style={{ marginHorizontal: 16, backgroundColor: ' #FFFFFF' }} elevation={5}>
+                <View style={{ marginHorizontal: 8, backgroundColor: ' #FFFFFF' ,width:'100%'}} elevation={5}>
                     <View style={{ width: '100%', height: 32, backgroundColor: '#3EB09B', }}>
                         <ImageBackground source={require('../assets/icons/Vector.png')} resizeMode="cover" >
 
