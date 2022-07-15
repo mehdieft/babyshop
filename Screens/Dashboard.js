@@ -114,10 +114,10 @@ export default function Dashboard() {
 
                 </View>
                 <Text style={{ marginTop: 32 }}>Articles & Videos</Text>
-                <View style={{ width: 334, height: 160, marginTop: 5 }}>
-                    <Image source={require('../assets/pillow.png')} resizeMode="cover" style={{ borderRadius: 5 }} />
+                <View style={{ width: '100%', marginTop: 5, alignItems: 'center' }}>
+                    <Image source={require('../assets/pillow.png')} resizeMode="cover" style={{ borderRadius: 5,width:'100%' }} />
                 </View>
-                <View elevation={15} style={{ backgroundColor: '#FFFFFF' }} >
+                <View elevation={5} style={{ backgroundColor: '#FFFFFF' }} >
                     <Text style={{ padding: 16, weight: '500', fontSize: 16, lineHeight: 24, color: '#282828' }}>
                         Take a prenatal vitamin
                     </Text>
@@ -128,8 +128,8 @@ export default function Dashboard() {
                     </Text>
                     <Text style={{ marginHorizontal: 16, marginVertical: 8, color: '#00866A' }}>Learn More</Text>
                 </View>
-                <View style={{ width: '100%', height: 152, marginTop: 16 }}>
-                    <Image source={require('../assets/runner.png')} resizeMode="cover" style={{ borderRadius: 5 }} />
+                <View style={{ width: '100%', height: 152, marginTop: 16,alignItems:'center'}}>
+                    <Image source={require('../assets/runner.png')} resizeMode="cover" style={{ borderRadius: 5 ,width:'100%'}} />
                 </View>
                 <View elevation={5} style={{ backgroundColor: '#FFFFFF' }}>
                     <Text style={{ padding: 16, weight: '500', fontSize: 16, lineHeight: 24, color: '#282828' }}>
@@ -138,6 +138,7 @@ export default function Dashboard() {
                         Maintaining a regular exercise routine throughout
                         your pregnancy can help you stay healthy and feel your best.</Text>
                     <Text style={{ marginHorizontal: 16, marginVertical: 8, color: '#00866A' }}>Learn More</Text>
+
                 </View>
 
 
