@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import  HomePage  from './Screens/home';
 import SignUp from './Screens/SignUp';
 import Dashboard from './Screens/Dashboard';
+import contractionTimer from './Screens/contractionTimer'
 
 
 
@@ -19,6 +20,7 @@ export default function App() {
         <Stack.Screen name="home" component={HomePage} />
         <Stack.Screen name="signUp" component={SignUp}/>
         <Stack.Screen name="Dashboard" component={Dashboard}/>
+        <Stack.Screen name="contarction Timer" component={contractionTimer}/>
       </Stack.Navigator>
     </NavigationContainer>
 

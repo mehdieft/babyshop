@@ -5,12 +5,13 @@ import Chips from '../components/Chips';
 import CardComponent from '../components/CardComponent';
 import ImageComponent from '../components/ImageComponent'
 import { Ionicons } from '@expo/vector-icons';
+import {PrimaryButton} from '../components/primaryButton'
 
 
 
 
 
-export default function Dashboard() {
+export default function Dashboard({navigation}) {
     return (
         <View style={{ marginVertical: 16, marginHorizontal: 16 }}>
             <ScrollView style={styles.scrollView}>
@@ -152,8 +153,8 @@ export default function Dashboard() {
                     Maintaining a regular exercise routine throughout your pregnancy can help you stay
                      healthy and feel your best.</Text>
                     <Text style={{ marginHorizontal: 16, marginVertical: 8, color: '#00866A' }}>Watch Now</Text>
-
                 </View>
+                <PrimaryButton text="See More" bgColor="#00866A" onPress={navigation.navigate('contarction Timer')}></PrimaryButton>
 
 
             </ScrollView>
