@@ -119,10 +119,10 @@ export default function Dashboard({navigation}) {
                     <Image source={require('../assets/pillow.png')} resizeMode="cover" style={{ borderRadius: 5, width: '100%' }} />
                 </View>
                 <View elevation={5} style={{ backgroundColor: '#FFFFFF' }} >
-                    <Text style={{ padding: 16, weight: '500', fontSize: 16, lineHeight: 24, color: '#282828' }}>
+                    <Text style={{ padding: 16, fontWeight: '500', fontSize: 16, lineHeight: 24, color: '#282828' }}>
                         Take a prenatal vitamin
                     </Text>
-                    <Text style={{ marginHorizontal: 16, weight: '400', fontSize: 14, lineHeight: 21, color: '#646464' }}>
+                    <Text style={{ marginHorizontal: 16, fontWeight: '400', fontSize: 14, lineHeight: 21, color: '#646464' }}>
                         Folic acid helps your baby's brain and spinal cord develop correctly.
                         This nutrient reduces the risk of
                         serious birth defects called spina bifida and anencephaly.
@@ -133,9 +133,9 @@ export default function Dashboard({navigation}) {
                     <Image source={require('../assets/runner.png')} resizeMode="cover" style={{ borderRadius: 5, width: '100%' }} />
                 </View>
                 <View elevation={5} style={{ backgroundColor: '#FFFFFF',marginBottom:16 }}>
-                    <Text style={{ padding: 16, weight: '500', fontSize: 16, lineHeight: 24, color: '#282828' }}>
+                    <Text style={{ padding: 16, fontWeight: '500', fontSize: 16, lineHeight: 24, color: '#282828' }}>
                         Exercise regularly</Text>
-                    <Text style={{ marginHorizontal: 16, weight: '400', fontSize: 14, lineHeight: 21, color: '#646464' }}>
+                    <Text style={{ marginHorizontal: 16, fontWeight: '400', fontSize: 14, lineHeight: 21, color: '#646464' }}>
                         Maintaining a regular exercise routine throughout
                         your pregnancy can help you stay healthy and feel your best.</Text>
                     <Text style={{ marginHorizontal: 16, marginVertical: 8, color: '#00866A' }}>Learn More</Text>
@@ -147,9 +147,9 @@ export default function Dashboard({navigation}) {
                     </ImageBackground>
                 </View>
                 <View elevation={5} style={{ backgroundColor: '#FFFFFF',marginBottom:32 }}>
-                    <Text style={{ padding: 16, weight: '500', fontSize: 16, lineHeight: 24, color: '#282828' }}>
+                    <Text style={{ padding: 16, fontWeight: '500', fontSize: 16, lineHeight: 24, color: '#282828' }}>
                     Coronavirus infection and pregnancy</Text>
-                    <Text style={{ marginHorizontal: 16, weight: '400', fontSize: 14, lineHeight: 21, color: '#646464' }}>
+                    <Text style={{ marginHorizontal: 16, fontWeight: '400', fontSize: 14, lineHeight: 21, color: '#646464' }}>
                     Maintaining a regular exercise routine throughout your pregnancy can help you stay
                      healthy and feel your best.</Text>
                     <Text style={{ marginHorizontal: 16, marginVertical: 8, color: '#00866A' }}>Watch Now</Text>

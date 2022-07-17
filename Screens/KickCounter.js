@@ -1,11 +1,20 @@
-import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, Image, ImageBackground,ScrollView } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import RadiusButton from '../components/RadiusButton';
 import { AntDesign } from '@expo/vector-icons';
+import DataTable from '../components/DataTable';
+
+
+
+
+
+
+
+
 
 export default function KickCounter() {
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <View style={styles.headerIconInner.main}>
                 <Text style={styles.headerIconInner.text}>Record Kicks</Text>
                 <MaterialCommunityIcons name="plus-circle" size={48} color="#EE6093" />
@@ -28,18 +37,26 @@ export default function KickCounter() {
                             <Text>last record</Text>
                             <Text>27 Jan 2022</Text>
                         </View>
+                        <View style={styles.content.table}>
+                            <View style={styles.content.row}>
+                            <DataTable content="3:32 pm" header="Time"  />
+                            <DataTable content="3:32 pm" header="Time"  />
+                            <DataTable content="3:32 pm" header="Time"  />
+                            <DataTable content="3:32 pm" header="Time"  />
+                            </View>
+                        </View>
                     </View>
                 </View>
 
 
             </View>
 
-        </View>
+        </ScrollView>
     )
 }
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#FFFFFF', margin: 16, padding: 16
+        backgroundColor: '#FFFFFF', margin: 16, padding: 16,
     },
     headerIconInner: {
         main: {
@@ -47,13 +64,13 @@ const styles = StyleSheet.create({
 
         },
         text: {
-            fontSize: 14, lineHeight: 18, weight: '400', marginTop: 16, marginRight: 8
+            fontSize: 14, lineHeight: 18, fontWeight: '400', marginTop: 16, marginRight: 8
         }
 
     },
     mainHeaderContent: {
         main: {
-            justifyContent: 'center', alignItems: 'center'
+            justifyContent: 'center', alignItems: 'center',
         },
         image: {
             width: 100,
@@ -62,14 +79,18 @@ const styles = StyleSheet.create({
             borderRadius: 50,
             borderColor: '#EE6093',
             border: 1, marginBottom: 24
-        }, text1: { fontSize: 14, lineHeight: 22, color: '#464646', weight: '400', marginBottom: 8 },
-        text2: { fontSize: 36, lineHeight: 36, color: '#212121', weight: '400', marginBottom: 24 },
-        text3: { fontSize: 10, lineHeight: 15, color: '#282828', weight: '400', marginBottom: 32 }
+        }, text1: { fontSize: 14, lineHeight: 22, color: '#464646', fontWeight: '400', marginBottom: 8 },
+        text2: { fontSize: 36, lineHeight: 36, color: '#212121', fontWeight: '400', marginBottom: 24 },
+        text3: { fontSize: 10, lineHeight: 15, color: '#282828', fontWeight: '400', marginBottom: 32 }
 
     },
     content: {
         main: { width: '100%', height: 32, backgroundColor: '#3EB09B', marginTop: 48 },
-        imageBackground: { paddingHorizontal: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }
+        imageBackground: { paddingHorizontal: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+        table:{marginVertical:16},
+        row:{
+            flexDirection:'row',justifyContent: 'space-between',
+        }
 
     }
 })
