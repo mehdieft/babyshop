@@ -43,12 +43,35 @@ export default function KickCounter() {
                 </View>
                 <View style={{ marginHorizontal: 16 }}>
 
-                    <View style={{ marginHorizontal: 16 }}>
+                    <View >
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 16 }}>
                             <Text style={styles.content.headerText}>last record</Text>
                             <Text style={styles.content.headerText2}>27 Jan 2022</Text>
                         </View>
                     </View>
+                </View>
+                <View>
+                    <View style={styles.content.table}>
+                        <View style={styles.content.tableRow}>
+                            <DataTable header="Time" content="3:32 pm" />
+                            <DataTable header="Time" content="3:32 pm" />
+                            <DataTable header="Time" content="3:32 pm" />
+                        </View>
+                        <Text style={styles.content.headerText}>last record</Text>
+                        <View style={styles.content.tableRow}>
+                            <DataTable header="Time" content="3:32 pm" />
+                            <DataTable header="Time" content="3:32 pm" />
+                            <DataTable header="Time" content="3:32 pm" />
+                        </View>
+                        <Text style={styles.content.headerText}>last record</Text>
+                        <View style={styles.content.tableRow}>
+                            <DataTable header="Time" content="3:32 pm" />
+                            <DataTable header="Time" content="3:32 pm" />
+                            <DataTable header="Time" content="3:32 pm" />
+                        </View>
+                        
+                    </View>
+
                 </View>
 
             </View>
@@ -87,12 +110,12 @@ const styles = StyleSheet.create({
     },
     content: {
         main: { width: '100%', height: 32, backgroundColor: '#EE6093', marginTop: 48 },
-        headerText: { fontWeight: '550', lineHeight: 21, fontSize: 21 },
+        headerText: { fontWeight: '550', lineHeight: 21, fontSize: 21 ,marginBottom:16},
         headerText2: { fontWeight: '400', lineHeight: 15, fontSize: 10 },
         imageBackground: { paddingHorizontal: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', },
-        table: { marginVertical: 16 },
+        table: { marginBottom: 16, marginHorizontal: 16 },
         tableRow: {
-            flexDirection: 'row', justifyContent: 'space-between',
+            flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1, borderColor: '#464646', marginBottom: 16, paddingBottom: 16
         }
 
     }
