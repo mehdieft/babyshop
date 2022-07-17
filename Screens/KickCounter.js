@@ -14,8 +14,8 @@ import DataTable from '../components/DataTable';
 
 export default function KickCounter() {
     return (
-        <ScrollView>
-            <View style={styles.container}>
+        <ScrollView style={styles.container}>
+            <View >
                 <View style={styles.headerIconInner.main}>
                     <Text style={styles.headerIconInner.text}>Record Kicks</Text>
                     <MaterialCommunityIcons name="plus-circle" size={48} color="#EE6093" />
@@ -33,22 +33,22 @@ export default function KickCounter() {
                             <Text style={{ marginVertical: 6, color: '#FFFFFF', marginLeft: 16, }}>Your baby at Week 10</Text>
                             <AntDesign name="addfolder" size={20} color="white" />
                         </ImageBackground>
-                        <Text>daskjhasdhkajhdkashdkhdsakhdkashddkshasdkha</Text>
                         <View style={{ marginHorizontal: 16 }}>
-                            <Text>daskjhasdhkajhdkashdkhdsakhdkashddkshasdkha</Text>
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 16 }}>
-                                <Text>last record</Text>
-                                <Text>27 Jan 2022</Text>
-                                <Text>daskjhasdhkajhdkashdkhdsakhdkashddkshasdkha</Text>
-                            </View>
-                            <View style={{ backgroundColor: 'red', height: 400, width: '100%' }}>
-                                <Text>daskjhasdhkajhdkashdkhdsakhdkashddkshasdkha</Text>
-                            </View>
+
 
                         </View>
                     </View>
 
 
+                </View>
+                <View style={{ marginHorizontal: 16 }}>
+
+                    <View style={{ marginHorizontal: 16 }}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 16 }}>
+                            <Text style={styles.content.headerText}>last record</Text>
+                            <Text style={styles.content.headerText2}>27 Jan 2022</Text>
+                        </View>
+                    </View>
                 </View>
 
             </View>
@@ -57,7 +57,7 @@ export default function KickCounter() {
 }
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#FFFFFF', margin: 16, padding: 16,
+        backgroundColor: '#FFFFFF', margin: 16, padding: 16, height: '50%'
     },
     headerIconInner: {
         main: {
@@ -86,7 +86,9 @@ const styles = StyleSheet.create({
 
     },
     content: {
-        main: { width: '100%', height: 32, backgroundColor: '#3EB09B', marginTop: 48 },
+        main: { width: '100%', height: 32, backgroundColor: '#EE6093', marginTop: 48 },
+        headerText: { fontWeight: '550', lineHeight: 21, fontSize: 21 },
+        headerText2: { fontWeight: '400', lineHeight: 15, fontSize: 10 },
         imageBackground: { paddingHorizontal: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', },
         table: { marginVertical: 16 },
         tableRow: {
