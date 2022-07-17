@@ -48,7 +48,6 @@ export default function SignUp({ navigation }) {
                                 style={{ fontSize: 16, marginHorizontal: 16, borderEndWidth: 2, color: '#3EB09B' }}
                                 onChangeText={onChangeNumber}
                                 value={number}
-                                placeholder="useless placeholder"
                                 keyboardType="numeric"
                             />
                         </View>
