@@ -7,7 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import  HomePage  from './Screens/home';
 import SignUp from './Screens/SignUp';
 import Dashboard from './Screens/Dashboard';
-import contractionTimer from './Screens/contractionTimer'
+import ContractionTimer from './Screens/ContractionTimer'
 import KickCounter from './Screens/KickCounter';
 
 
@@ -21,7 +21,7 @@ export default function App() {
         <Stack.Screen name="home" component={HomePage} />
         <Stack.Screen name="signUp" component={SignUp}/>
         <Stack.Screen name="Dashboard" component={Dashboard}/>
-        <Stack.Screen name="Contraction Timer" component={contractionTimer}/>
+        <Stack.Screen name="Contraction Timer" component={ContractionTimer}/>
         <Stack.Screen name="Kick counter" component={KickCounter}  />
       </Stack.Navigator>
     </NavigationContainer>

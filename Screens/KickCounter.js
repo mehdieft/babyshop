@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, ImageBackground,ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, ImageBackground, ScrollView } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import RadiusButton from '../components/RadiusButton';
 import { AntDesign } from '@expo/vector-icons';
@@ -14,43 +14,44 @@ import DataTable from '../components/DataTable';
 
 export default function KickCounter() {
     return (
-        <ScrollView style={styles.container}>
-            <View style={styles.headerIconInner.main}>
-                <Text style={styles.headerIconInner.text}>Record Kicks</Text>
-                <MaterialCommunityIcons name="plus-circle" size={48} color="#EE6093" />
-            </View>
-            <View style={styles.mainHeaderContent.main}>
-                <Text style={styles.mainHeaderContent.text1}>kicks</Text>
-                <Text style={styles.mainHeaderContent.text2}>07</Text>
-                <Image source={require('../assets/icons/babyCounter.png')} style={styles.mainHeaderContent.image} />
-                <Text style={styles.mainHeaderContent.text1}>01:05</Text>
-                <Text style={styles.mainHeaderContent.text3}>Duration</Text>
-                <RadiusButton text="stop" onpress={() => alert('stop')} bgColor='#EE6093' />
+        <ScrollView>
+            <View style={styles.container}>
+                <View style={styles.headerIconInner.main}>
+                    <Text style={styles.headerIconInner.text}>Record Kicks</Text>
+                    <MaterialCommunityIcons name="plus-circle" size={48} color="#EE6093" />
+                </View>
+                <View style={styles.mainHeaderContent.main}>
+                    <Text style={styles.mainHeaderContent.text1}>kicks</Text>
+                    <Text style={styles.mainHeaderContent.text2}>07</Text>
+                    <Image source={require('../assets/icons/babyCounter.png')} style={styles.mainHeaderContent.imagee} />
+                    <Text style={styles.mainHeaderContent.text1}>01:05</Text>
+                    <Text style={styles.mainHeaderContent.text3}>Duration</Text>
+                    <RadiusButton text="stop" onpress={() => alert('stop')} bgColor='#EE6093' />
 
-                <View style={styles.content.main}>
-                    <ImageBackground source={require('../assets/icons/Vector.png')} style={styles.content.imageBackground} resizeMode="cover" >
-                        <Text style={{ marginVertical: 6, color: '#FFFFFF', marginLeft: 16, }}>Your baby at Week 10</Text>
-                        <AntDesign name="addfolder" size={20} color="white" />
-                    </ImageBackground>
-                    <View style={{ marginHorizontal: 16 }}>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 16 }}>
-                            <Text>last record</Text>
-                            <Text>27 Jan 2022</Text>
-                        </View>
-                        <View style={styles.content.table}>
-                            <View style={styles.content.row}>
-                            <DataTable content="3:32 pm" header="Time"  />
-                            <DataTable content="3:32 pm" header="Time"  />
-                            <DataTable content="3:32 pm" header="Time"  />
-                            <DataTable content="3:32 pm" header="Time"  />
+                    <View style={styles.content.main}>
+                        <ImageBackground source={require('../assets/icons/Vector.png')} style={styles.content.imageBackground} resizeMode="cover" >
+                            <Text style={{ marginVertical: 6, color: '#FFFFFF', marginLeft: 16, }}>Your baby at Week 10</Text>
+                            <AntDesign name="addfolder" size={20} color="white" />
+                        </ImageBackground>
+                        <Text>daskjhasdhkajhdkashdkhdsakhdkashddkshasdkha</Text>
+                        <View style={{ marginHorizontal: 16 }}>
+                            <Text>daskjhasdhkajhdkashdkhdsakhdkashddkshasdkha</Text>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 16 }}>
+                                <Text>last record</Text>
+                                <Text>27 Jan 2022</Text>
+                                <Text>daskjhasdhkajhdkashdkhdsakhdkashddkshasdkha</Text>
                             </View>
+                            <View style={{ backgroundColor: 'red', height: 400, width: '100%' }}>
+                                <Text>daskjhasdhkajhdkashdkhdsakhdkashddkshasdkha</Text>
+                            </View>
+
                         </View>
                     </View>
+
+
                 </View>
 
-
             </View>
-
         </ScrollView>
     )
 }
@@ -72,13 +73,13 @@ const styles = StyleSheet.create({
         main: {
             justifyContent: 'center', alignItems: 'center',
         },
-        image: {
+        imagee: {
             width: 100,
             height: 100,
             padding: 18.65,
             borderRadius: 50,
             borderColor: '#EE6093',
-            border: 1, marginBottom: 24
+            borderWidth: 1, marginBottom: 24
         }, text1: { fontSize: 14, lineHeight: 22, color: '#464646', fontWeight: '400', marginBottom: 8 },
         text2: { fontSize: 36, lineHeight: 36, color: '#212121', fontWeight: '400', marginBottom: 24 },
         text3: { fontSize: 10, lineHeight: 15, color: '#282828', fontWeight: '400', marginBottom: 32 }
@@ -86,10 +87,10 @@ const styles = StyleSheet.create({
     },
     content: {
         main: { width: '100%', height: 32, backgroundColor: '#3EB09B', marginTop: 48 },
-        imageBackground: { paddingHorizontal: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-        table:{marginVertical:16},
-        row:{
-            flexDirection:'row',justifyContent: 'space-between',
+        imageBackground: { paddingHorizontal: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', },
+        table: { marginVertical: 16 },
+        tableRow: {
+            flexDirection: 'row', justifyContent: 'space-between',
         }
 
     }
