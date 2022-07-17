@@ -1,6 +1,7 @@
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import RadiusButton from '../components/RadiusButton';
+import { AntDesign } from '@expo/vector-icons';
 
 export default function KickCounter() {
     return (
@@ -16,6 +17,20 @@ export default function KickCounter() {
                 <Text style={styles.mainHeaderContent.text1}>01:05</Text>
                 <Text style={styles.mainHeaderContent.text3}>Duration</Text>
                 <RadiusButton text="stop" onpress={() => alert('stop')} bgColor='#EE6093' />
+
+                <View style={styles.content.main}>
+                    <ImageBackground source={require('../assets/icons/Vector.png')} style={styles.content.imageBackground} resizeMode="cover" >
+                        <Text style={{ marginVertical: 6, color: '#FFFFFF', marginLeft: 16, }}>Your baby at Week 10</Text>
+                        <AntDesign name="addfolder" size={20} color="white" />
+                    </ImageBackground>
+                    <View style={{ marginHorizontal: 16 }}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 16 }}>
+                            <Text>last record</Text>
+                            <Text>27 Jan 2022</Text>
+                        </View>
+                    </View>
+                </View>
+
 
             </View>
 
@@ -50,6 +65,11 @@ const styles = StyleSheet.create({
         }, text1: { fontSize: 14, lineHeight: 22, color: '#464646', weight: '400', marginBottom: 8 },
         text2: { fontSize: 36, lineHeight: 36, color: '#212121', weight: '400', marginBottom: 24 },
         text3: { fontSize: 10, lineHeight: 15, color: '#282828', weight: '400', marginBottom: 32 }
+
+    },
+    content: {
+        main: { width: '100%', height: 32, backgroundColor: '#3EB09B', marginTop: 48 },
+        imageBackground: { paddingHorizontal: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }
 
     }
 })
