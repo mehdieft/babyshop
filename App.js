@@ -9,7 +9,7 @@ import SignUp from './Screens/SignUp';
 import Dashboard from './Screens/Dashboard';
 import ContractionTimer from './Screens/ContractionTimer'
 import KickCounter from './Screens/KickCounter';
-import Setting  from './Screens/Setting';
+import Settings  from './Screens/Setting';
 import WhatsUp from './Screens/WhatsUp';
 
 
@@ -24,7 +24,7 @@ export default function App() {
         <Stack.Screen name="Dashboard" component={Dashboard}/>
         <Stack.Screen name="Contraction Timer" component={ContractionTimer}/>
         <Stack.Screen name="Kick counter" component={KickCounter}  />
-        <Stack.Screen name="Settings" component={Setting}/>
+        <Stack.Screen name="Settings" component={Settings}/>
         <Stack.Screen name="Whast up?" component={WhatsUp}/>
       </Stack.Navigator>
     </NavigationContainer>
