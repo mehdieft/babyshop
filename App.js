@@ -4,29 +4,56 @@ import { useWindowDimensions } from 'react-native';
 import PrimaryButton from './components/primaryButton'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import  HomePage  from './Screens/home';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomePage from './Screens/home';
 import SignUp from './Screens/SignUp';
 import Dashboard from './Screens/Dashboard';
 import ContractionTimer from './Screens/ContractionTimer'
 import KickCounter from './Screens/KickCounter';
-import Settings  from './Screens/Setting';
+import Settings from './Screens/Setting';
 import WhatsUp from './Screens/WhatsUp';
+import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
+import { Fontisto } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons'; 
+
+
+
 
 
 const Stack = createNativeStackNavigator();
+const StackNavigator = () => (
+  <Stack.Navigator initialRouteName="Home">
+    <Stack.Screen name="home" component={HomePage} />
+    <Stack.Screen name="signUp" component={SignUp} />
+    <Stack.Screen name="Dashboard" component={Dashboard} />
+    <Stack.Screen name="Contraction Timer" component={ContractionTimer} />
+    <Stack.Screen name="Kick counter" component={KickCounter} />
+    <Stack.Screen name="Whast up?" component={WhatsUp} />
+    <Stack.Screen name="Settings" component={Settings} />
+  </Stack.Navigator>
+
+)
+
+const Tab = createBottomTabNavigator();
+const TabNavigatior = () => (
+  <Tab.Navigator initialRouteName="Home">
+    <Tab.Screen options={{ tabBarIcon: () => <Entypo name="home" size={24} color="black" /> ,headerShown:false}} name="Home" component={StackNavigator} />
+    <Tab.Screen options={{ tabBarIcon: () => <AntDesign name="dashboard" size={24} color="black" /> }} name="Dashboard" component={Dashboard} />
+    <Tab.Screen name="Contraction Timer"options={{ tabBarIcon: () => <Entypo name="squared-plus" size={24} color="black" />}}component={ContractionTimer} />
+    <Tab.Screen name="Kick counter" component={KickCounter} options={{ tabBarIcon: () => <FontAwesome name="heart" size={24} color="red" /> }} />
+    <Tab.Screen name="Whast up?" component={WhatsUp} options={{ tabBarIcon: () => <Fontisto name="nurse" size={24} color="black" /> }} />
+    <Tab.Screen name="Settings" component={Settings} options={{ tabBarIcon: () => <Feather name="settings" size={24} color="black" /> }} />
+  </Tab.Navigator>
+)
+
 export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="home" component={HomePage} />
-        <Stack.Screen name="signUp" component={SignUp}/>
-        <Stack.Screen name="Dashboard" component={Dashboard}/>
-        <Stack.Screen name="Contraction Timer" component={ContractionTimer}/>
-        <Stack.Screen name="Kick counter" component={KickCounter}  />
-        <Stack.Screen name="Settings" component={Settings}/>
-        <Stack.Screen name="Whast up?" component={WhatsUp}/>
-      </Stack.Navigator>
+      {/* <StackNavigator/> */}
+      <TabNavigatior />
     </NavigationContainer>
 
 

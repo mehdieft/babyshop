@@ -33,7 +33,7 @@ export default function HomePage({ navigation }) {
 }
 const styles = StyleSheet.create({
     container: {
-        marginTop: 100,
+        marginTop: 10,
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
 
     },
     freeSpace:{
-        height:200
+        height:20
     },
     headerConatiner:{
         marginTop: 100,
