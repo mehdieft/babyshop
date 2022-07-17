@@ -15,7 +15,7 @@ import DataTable from '../components/DataTable';
 export default function KickCounter() {
     return (
         <ScrollView style={styles.container}>
-            <View >
+            <View>
                 <View style={styles.headerIconInner.main}>
                     <Text style={styles.headerIconInner.text}>Record Kicks</Text>
                     <MaterialCommunityIcons name="plus-circle" size={48} color="#EE6093" />
