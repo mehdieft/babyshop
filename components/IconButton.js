@@ -1,17 +1,26 @@
-import { View, TouchableOpacity } from 'react-native';
+import { TouchableOpacity, Text,View } from 'react-native';
 
 
 
 
-export default function IconButton(props) {
+ function IconButton(props) {
     return (
-        <TouchableOpacity
-            style={{ backgroundColor: props.bgColor, paddingVertical: 4, paddingHorizontal: 8, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', }}>
-            <Text style={{ color: props.color }}>{props.text}</Text>
-            <props.children />
+       
 
-        </TouchableOpacity>
+            <TouchableOpacity
+                style={{margin:2,borderRadius:25, backgroundColor: props.bgColor, paddingVertical: 4, paddingHorizontal: 8, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderWidth:1,borderColor:props.color }}>
+                <Text style={{ color: props.color ,paddingHorizontal: 4,fontSize:10}}>{props.text}</Text>
+                {props.children}
+
+            </TouchableOpacity>
+       
 
 
     )
 }
+IconButton.defaultProps = {
+    bgColor:'white',
+    color:'red',
+    text:'danger'
+}
+export default IconButton
