@@ -32,6 +32,19 @@ export default function WhatsUp() {
             </View>
             <Text style={{ marginTop: 25, marginBottom: 10,fontSize:16,color: '#E18AB6' }}>Medications</Text>
             <SearchInput color="#E7A1C5" placeholder="What Did You Take?" />
+            <Text style={{ marginTop: 25, marginBottom: 10 }}>Recent</Text>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', margin: 2}}>
+                <IconButton bgColor="white" color="#ACACAC" text="nothing"></IconButton>
+                <IconButton bgColor="white" color="#ACACAC" text="fatisue / exhaustion"></IconButton>
+                <IconButton bgColor="#B0D0DB" color="#ACACAC" text="dizziness">
+                    <Octicons name="check-circle-fill" size={24} color="#398AA5" />
+                </IconButton>
+                <IconButton bgColor="#B0D0DB" color="#ACACAC" text="morning sickness / nausea">
+                    <Octicons name="check-circle-fill" size={24} color="#398AA5" />
+                </IconButton>
+                <IconButton bgColor="white" color="#ACACAC" text="shortness of breath"></IconButton>
+                <IconButton bgColor="white" color="#ACACAC" text="acen"></IconButton>
+            </View>
 
 
         </ScrollView>
