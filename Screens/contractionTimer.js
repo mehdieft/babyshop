@@ -1,8 +1,10 @@
-import { View, Text, StyleSheet, Image, ImageBackground, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import RadiusButton from '../components/RadiusButton';
 import { AntDesign } from '@expo/vector-icons';
 import DataTable from '../components/DataTable';
+import { FontAwesome } from '@expo/vector-icons';
+
 
 
 
@@ -23,7 +25,22 @@ export default function ContractionTimer() {
                 <View style={styles.mainHeaderContent.main}>
                     <Text style={styles.mainHeaderContent.text2}>01:16</Text>
                     <Text style={styles.mainHeaderContent.text1}>Duration</Text>
-                 
+                    <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', borderRadius: 24,marginTop:41,marginBottom:41 }} >
+                        <TouchableOpacity style={{ flexDirection: 'row', paddingHorizontal: 17, paddingVertical: 11, textAlign: 'center', height: 48, width: 84 ,alignItems: 'center'}}>
+                            <FontAwesome   style={{padding:2}} name="flash" size={12} color="#ACACAC" />
+                            <FontAwesome  style={{padding:2}} name="flash" size={12} color="#ACACAC" />
+                            <Text style={{color:'#ACACAC'}}>Low</Text></TouchableOpacity>
+                        <TouchableOpacity style={{ backgroundColor:"#D1EFEF",flexDirection: 'row', paddingHorizontal: 17, paddingVertical: 11, textAlign: 'center', height: 48, width: 84,alignItems: 'center',borderRadius:24 }}>
+                            <FontAwesome style={{padding:2}} name="flash" size={12} color="#ACACAC" />
+                            <FontAwesome style={{padding:2}} name="flash" size={12} color="#ACACAC" />
+                            <Text style={{color:'#ACACAC'}}>Med</Text></TouchableOpacity>
+                        <TouchableOpacity style={{ flexDirection: 'row', paddingHorizontal: 17, paddingVertical: 11, textAlign: 'center', height: 48, width: 84 ,alignItems: 'center'}}>
+                            <FontAwesome style={{padding:2}} name="flash" size={12} color="#ACACAC" />
+                            <FontAwesome style={{padding:2}} name="flash" size={12} color="#ACACAC" />
+                            <FontAwesome style={{padding:2}} name="flash" size={12} color="#ACACAC" />
+                            <Text style={{color:'#ACACAC'}}>High</Text></TouchableOpacity>
+                    </View>
+
                     <RadiusButton text="stop" onpress={() => alert('stop')} bgColor='#1AB0B0' />
 
                     <View style={styles.content.main}>
@@ -67,7 +84,7 @@ export default function ContractionTimer() {
                             <DataTable header="Time" content="3:32 pm" />
                             <DataTable header="Time" content="3:32 pm" />
                         </View>
-                        
+
                     </View>
 
                 </View>
@@ -86,7 +103,7 @@ const styles = StyleSheet.create({
 
         },
         text: {
-            fontSize: 14, lineHeight: 18, fontWeight: '400', marginTop: 16, marginRight: 8
+            fontSize: 14, lineHeight: 18, fontWeight: '400', marginTop: 16, marginRight: 8, marginBottom: 46
         }
 
     },
@@ -102,13 +119,13 @@ const styles = StyleSheet.create({
             borderColor: '#EE6093',
             borderWidth: 1, marginBottom: 24
         }, text1: { fontSize: 14, lineHeight: 22, color: '#464646', fontWeight: '400', marginBottom: 8 },
-        text2: { fontSize: 36, lineHeight: 36, color: '#212121', fontWeight: '400', marginBottom: 24 },
+        text2: { fontSize: 36, lineHeight: 36, color: '#212121', fontWeight: '400', marginBottom: 4 },
         text3: { fontSize: 10, lineHeight: 15, color: '#282828', fontWeight: '400', marginBottom: 32 }
 
     },
     content: {
         main: { width: '100%', height: 32, backgroundColor: '#EE6093', marginTop: 48 },
-        headerText: { fontWeight: '550', lineHeight: 21, fontSize: 21 ,marginBottom:16},
+        headerText: { fontWeight: '550', lineHeight: 21, fontSize: 21, marginBottom: 16 },
         headerText2: { fontWeight: '400', lineHeight: 15, fontSize: 10 },
         imageBackground: { paddingHorizontal: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', },
         table: { marginBottom: 16, marginHorizontal: 16 },
