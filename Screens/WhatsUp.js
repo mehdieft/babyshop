@@ -13,7 +13,7 @@ export default function WhatsUp() {
                 <SearchInput color="#398AA5" placeholder="What’s your body telling you?" />
                 <Text style={{ marginTop: 25, marginBottom: 10 }}>Recent</Text>
             </View>
-            <View style={{ flexDirection: 'row', flexWrap: 'wrap', margin: 2}}>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', margin: 2 }}>
                 <IconButton bgColor="white" color="#ACACAC" text="nothing"></IconButton>
                 <IconButton bgColor="white" color="#ACACAC" text="fatisue / exhaustion"></IconButton>
                 <IconButton bgColor="#B0D0DB" color="#ACACAC" text="dizziness">
@@ -30,20 +30,29 @@ export default function WhatsUp() {
                 <IconButton bgColor="white" color="#ACACAC" text="nothing"></IconButton>
                 <IconButton bgColor="white" color="#ACACAC" text="fatisue / exhaustion"></IconButton>
             </View>
-            <Text style={{ marginTop: 25, marginBottom: 10,fontSize:16,color: '#E18AB6' }}>Medications</Text>
+
+
+
+
+
+
+
+
+            <Text style={{ marginTop: 25, marginBottom: 10, fontSize: 16, color: '#E18AB6' }}>Medications</Text>
             <SearchInput color="#E7A1C5" placeholder="What Did You Take?" />
             <Text style={{ marginTop: 25, marginBottom: 10 }}>Recent</Text>
-            <View style={{ flexDirection: 'row', flexWrap: 'wrap', margin: 2}}>
-                <IconButton bgColor="white" color="#ACACAC" text="nothing"></IconButton>
-                <IconButton bgColor="white" color="#ACACAC" text="fatisue / exhaustion"></IconButton>
-                <IconButton bgColor="#B0D0DB" color="#ACACAC" text="dizziness">
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', margin: 2 }}>
+                <IconButton bgColor="white" color="#ACACAC" text="calm"></IconButton>
+                <IconButton bgColor="white" color="#ACACAC" text="moody"></IconButton>
+                <IconButton bgColor="#B0D0DB" color="#ACACAC" text="in love">
                     <Octicons name="check-circle-fill" size={24} color="#398AA5" />
                 </IconButton>
-                <IconButton bgColor="#B0D0DB" color="#ACACAC" text="morning sickness / nausea">
+                <IconButton bgColor="#B0D0DB" color="#ACACAC" text="weepy">
                     <Octicons name="check-circle-fill" size={24} color="#398AA5" />
                 </IconButton>
-                <IconButton bgColor="white" color="#ACACAC" text="shortness of breath"></IconButton>
-                <IconButton bgColor="white" color="#ACACAC" text="acen"></IconButton>
+                <IconButton bgColor="white" color="#ACACAC" text="worried"></IconButton>
+                <IconButton bgColor="white" color="#ACACAC" text="angry"></IconButton>
+                <IconButton bgColor="white" color="#ACACAC" text="overwhelmed"></IconButton>
             </View>
 
 
