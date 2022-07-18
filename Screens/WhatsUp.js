@@ -42,6 +42,26 @@ export default function WhatsUp() {
             <SearchInput color="#E7A1C5" placeholder="What Did You Take?" />
             <Text style={{ marginTop: 25, marginBottom: 10 }}>Recent</Text>
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', margin: 2 }}>
+                <IconButton color="#E18AB6" text="Bendary">
+                    <Octicons name="check-circle-fill" size={24} color="#E18AB6" />
+                </IconButton>
+                <IconButton bgColor="white" color="#ACACAC" text="Tylenol"></IconButton>
+                <IconButton bgColor="white" color="#ACACAC" text="Endometrin"></IconButton>
+                <IconButton bgColor="white" color="#ACACAC" text="Claritin"></IconButton>
+            </View>
+            <Text style={{ marginTop: 25, marginBottom: 10 }}>Selected</Text>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', margin: 2 }}>
+                <IconButton color="#E18AB6" text="Bendary">
+                    <Octicons name="check-circle-fill" size={24} color="#E18AB6" />
+                </IconButton>
+            </View>
+
+
+
+
+
+
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', margin: 2 }}>
                 <IconButton bgColor="white" color="#ACACAC" text="calm"></IconButton>
                 <IconButton bgColor="white" color="#ACACAC" text="moody"></IconButton>
                 <IconButton bgColor="#B0D0DB" color="#ACACAC" text="in love">
