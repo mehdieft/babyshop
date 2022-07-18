@@ -3,6 +3,9 @@ import SearchInput from '../components/SearchInput';
 import IconButton from '../components/IconButton';
 import { Octicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+
 
 
 
@@ -82,9 +85,19 @@ export default function WhatsUp() {
                     <MaterialIcons name="cancel" size={24} color="#6AB6B9" />
                 </IconButton>
             </View>
-            <Text style={{ marginTop: 25, marginBottom: 10, fontSize: 16, color: '#E18AB6' }}>Cycle Length</Text>
+            <Text style={{ marginTop: 25, marginBottom: 10, fontSize: 16, color: '#00866A' }}>Cycle Length</Text>
+            <SearchInput color="#00866A" placeholder="24 Days" ><FontAwesome5 name="calendar-day" size={24} color="white" /></SearchInput>
 
+            <Text style={{ marginTop: 25, marginBottom: 10, fontSize: 16, color: '#1AB0B0' }}>Sleep</Text>
+            <SearchInput color="#1AB0B0" placeholder="24 Days" ><FontAwesome5 name="calendar-minus" size={24} color="white" /></SearchInput>
 
+            <Text style={{ marginTop: 25, marginBottom: 10, fontSize: 16, color: '#7A0B44' }}>Temprature</Text>
+            <SearchInput color="#7A0B44" placeholder="24 Days" ><MaterialCommunityIcons name="temperature-fahrenheit" size={24} color="white" /></SearchInput>
+
+            <Text style={{ marginTop: 25, marginBottom: 10, fontSize: 16, color: '#7B97A5' }}>Weight</Text>
+            <SearchInput color="#7B97A5" placeholder="24 Days" ><MaterialCommunityIcons name="weight-kilogram" size={24} color="white" /></SearchInput>
+
+            <View style={{ height: 120 }}></View>
 
 
 
