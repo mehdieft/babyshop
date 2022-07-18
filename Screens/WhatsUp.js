@@ -2,6 +2,8 @@ import { View, Text, StyleSheet, Image, ImageBackground, ScrollView } from 'reac
 import SearchInput from '../components/SearchInput';
 import IconButton from '../components/IconButton';
 import { Octicons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+
 
 
 
@@ -55,12 +57,9 @@ export default function WhatsUp() {
                     <Octicons name="check-circle-fill" size={24} color="#E18AB6" />
                 </IconButton>
             </View>
-
-
-
-
-
-
+            <Text style={{ marginTop: 25, marginBottom: 10, fontSize: 16, color: '#E18AB6' }}>Mood</Text>
+            <SearchInput color="#45A4A7" placeholder="I feel..." />
+            <Text style={{ marginTop: 25, marginBottom: 10 }}>Recent</Text>
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', margin: 2 }}>
                 <IconButton bgColor="white" color="#ACACAC" text="calm"></IconButton>
                 <IconButton bgColor="white" color="#ACACAC" text="moody"></IconButton>
@@ -74,6 +73,20 @@ export default function WhatsUp() {
                 <IconButton bgColor="white" color="#ACACAC" text="angry"></IconButton>
                 <IconButton bgColor="white" color="#ACACAC" text="overwhelmed"></IconButton>
             </View>
+            <Text style={{ marginTop: 25, marginBottom: 10 }}>Selected</Text>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', margin: 2 }}>
+                <IconButton bgColor="white" color="#ACACAC" text="calm">
+                    <MaterialIcons name="cancel" size={24} color="#6AB6B9" />
+                </IconButton>
+                <IconButton bgColor="white" color="#ACACAC" text="moody">
+                    <MaterialIcons name="cancel" size={24} color="#6AB6B9" />
+                </IconButton>
+            </View>
+            <Text style={{ marginTop: 25, marginBottom: 10, fontSize: 16, color: '#E18AB6' }}>Cycle Length</Text>
+
+
+
+
 
 
         </ScrollView>
@@ -81,7 +94,7 @@ export default function WhatsUp() {
 }
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#FFFFFF', margin: 16, padding: 16, height: '50%'
+        backgroundColor: '#FFFFFF', margin: 16, padding: 16, height: '100%'
     },
     sympthoms: { marginTop: 8, color: '#398AA5', fontSize: 14, fontWeight: '500', lineHeight: 21, marginBottom: 20 }
 })
