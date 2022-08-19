@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Image, ImageBackground, SafeAreaView, ScrollView } from 'react-native';
 import PrimaryButton from '../components/primaryButton'
+import { useAuth } from "../context/AuthProvider";
+
 
 export default function HomePage({ navigation }) {
+    const {signUpUser}=useAuth();
     function clickEvent() {
         console.log("typing")
     }
@@ -22,6 +25,7 @@ export default function HomePage({ navigation }) {
                     <View style={styles.text}>
 
                     <PrimaryButton  onPress={() => navigation.navigate('signUp')} text='get started' bgColor="#89D2C4" />
+                    <Button title="click me" onPress={()=>{signUpUser()}}/>
                     </View>
                     <View></View>
                 </ImageBackground>

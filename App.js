@@ -17,6 +17,10 @@ import { FontAwesome } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { Fontisto } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons'; 
+import AuthProvider from './context/AuthProvider';
+import { useAuth } from './context/AuthProvider';
+import { useEffect } from 'react';
+import { ActivityIndicator } from 'react-native';
 
 
 
@@ -37,7 +41,7 @@ const StackNavigator = () => (
 )
 
 const Tab = createBottomTabNavigator();
-const TabNavigatior = () => (
+const AppStck = () => (
   <Tab.Navigator initialRouteName="Home">
     <Tab.Screen options={{ tabBarIcon: () => <Entypo name="home" size={24} color="black" /> ,headerShown:false}} name="Home" component={StackNavigator} />
     <Tab.Screen options={{ tabBarIcon: () => <AntDesign name="dashboard" size={24} color="black" /> }} name="Dashboard" component={Dashboard} />
@@ -47,18 +51,38 @@ const TabNavigatior = () => (
     <Tab.Screen name="Settings" component={Settings} options={{ tabBarIcon: () => <Feather name="settings" size={24} color="black" /> }} />
   </Tab.Navigator>
 )
+function App() {
+  useEffect(()=>{
+    console.log("userdata",userData)
+  },[userData])
+  const {userData}=useAuth();
+  const {loading}=useAuth()
+  console.log("fucking user data_______________",userData)
+  if(loading){
+    return (
+      <ActivityIndicator style={{flex:1,justifyContent:'center',alignItems:'center'}} size="large" />
+    )
+  }else{
+    return (
+      <AuthProvider>
+      <NavigationContainer> 
+        
+        {(userData.token && userData.token.trim().length>10)?  <StackNavigator/>:<AppStck/>}
+     
+      </NavigationContainer>
+    </AuthProvider>
 
-export default function App() {
+)
+}
 
-  return (
-    <NavigationContainer>
-      {/* <StackNavigator/> */}
-      <TabNavigatior />
-    </NavigationContainer>
-
-
-
-  );
 }
 
 
+export default () => {
+  return (
+    <AuthProvider>
+      <App />
+
+    </AuthProvider>
+  );
+};
